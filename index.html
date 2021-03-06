@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>What's the weather doing?</h1>
+    <h2>Type your city name below:</h2>
+
+    <form id="form">
+      <input type="text" name="query" placeholder="Type your city name..." />
+      <button>Search</button>
+    </form>
+
+    <main class="hidden">
+      <h3>City: <span id="city-name"></span></h3>
+
+      <h3>Temperature: <span id="city-temp"></span></h3>
+
+      <h3>Weather: <span id="city-weather"></span></h3>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
