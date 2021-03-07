@@ -13,7 +13,7 @@ form.addEventListener("submit", async function (e) {
   console.log(searchInput);
   const config = { params: { q: searchInput, appid: apiKey } };
   const res = await axios.get(
-    `http://api.openweathermap.org/data/2.5/weather`,
+    `https://api.openweathermap.org/data/2.5/weather`,
     config
   );
   try {
