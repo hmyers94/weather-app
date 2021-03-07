@@ -1,9 +1,11 @@
 const form = document.querySelector("#form");
-const apiKey = "600574fda9fb886164e1f3e9df2568c8";
+let apiKey = "";
 const cityName = document.querySelector("#city-name");
 const cityTemp = document.querySelector("#city-temp");
 const cityWeather = document.querySelector("#city-weather");
 const main = document.querySelector("main");
+
+apiKey = prompt("Enter your OpenWeather key: ");
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -21,7 +23,7 @@ form.addEventListener("submit", async function (e) {
   }
 
   form.elements.query.value = "";
-  main.classList.toggle("hidden");
+  main.classList.remove("hidden");
 });
 
 const getWeather = function (city) {
